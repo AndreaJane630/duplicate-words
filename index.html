@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Finding Duplicated Words</title>
+	<!--<link rel="stylesheet" href="normalize.min.css">-->
+	<link rel="stylesheet" href="dups.css">
+<style>
+body {
+	background: azure;
+	font-family: Arial, sans-serif;
+}
+.contentWrapper {
+	max-width: 750px;
+	margin-top: 7vh;
+}
+#signUp {
+	background: ivory;
+}
+#sentence {
+	width: 98%;
+	height: 35px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	font-size: 1rem;
+}
+#sentence:focus {
+	background: azure;
+	border: none;
+	/*outline: none; */
+}
+.dup {
+	text-decoration-line: underline; /* not supported in Edge/IE */
+	text-decoration-color: red;
+    text-decoration-style: solid;
+}
+
+#placeholder  {
+	display: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#placeholder li {
+	display: inline-block;
+	margin-bottom: 0;
+	font-style: Arial, sans-serif;
+	font-size: 16px;
+	margin-right: 4px;
+}
+label {
+	font-size: 1rem;
+	color: rgba(0,0,0,.6);
+	font-weight: bold;
+}
+button {
+	background: gainsboro;
+	color: navy;
+	font-weight: bold;
+	border-radius: 3px;
+	outline: none;
+	padding: 5px 10px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+h3 {
+	color: rgba(0,0,0,.6);
+}
+
+</style>
+</head>
+<body>
+	<div class="contentWrapper">
+		<fieldset id="signUp">
+			<legend>Enter your favorite sentence</legend>
+			<label for="sentence">Your Sentence:</label>
+			<input id="sentence" name="sentence" type="text"><br><br>
+			<button id="find">Find duplicates</button>
+			<h3>Your sentence with duplicates indicated:</h3>
+			<ul id="placeholder"></ul>	
+		</fieldset>
+	</div>
+
+<script src="dups.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+body {
+	font-size: 14px;
+	line-height: 1.8; /* unitless line-height value on body fixes inheritence issues */
+	margin: 0px;
+	min-width: 790px;
+}
+
+p {
+	font-size: 1.2rem;
+	line-height: 1.9rem;
+	margin: 0;
+	margin-bottom: .7rem;
+	text-align: left;
+}
+.contentWrapper {
+	max-width: 750px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+#signUp {
+	margin-top: 10px;
+	padding: 0 20px 15px 20px;
+	border: 1px solid #bbb;
+}
+#signUp legend {
+	font-size: 2rem;
+	font-weight: 200;
+	padding: 0 .2rem;
+}
+#signUp label {
+	display: block;
+	padding-top: 1rem;
+	margin-top: -.9rem;
+}
