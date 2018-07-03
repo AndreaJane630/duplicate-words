@@ -1,19 +1,24 @@
 function findDups() {
 	
-	let listitems = [];
+	let listitems = []; // array to hold each <li> to be displayed after sentence has been processed
 	let unordered = document.getElementById('placeholder');
 	unordered.innerHTML = ""; 
 	unordered.style.display = "none";
-	let locations = [];
-	let wordlist = [];
+	let locations = []; //the locs of the dups, i.e. their index in the wordlist array
+	let wordlist = []; // the words that are extracted from the sentence
 	let msg = document.getElementById('msg');
 	if (msg) {
-		// Find the element which contains the element to be removed.
+		// Find the element which is the parent of the msg
+		
 		let containerEl = document.getElementById('signUp');
-		// Remove the element.
+		// Remove the message.
 		containerEl.removeChild(msg);
 	}
-		
+	// function that is called below after sentence is split into words - its purpose is to 
+	//save the words as <li> elements so that the sentence can be reconstructed 
+	//it gets the wordlist array as input before it has been tampered with, 
+	//so all commas, periods, and question marks are preserved.
+	
 	function createOutput(wordlist) {
 		
 		for (i = 0; i < wordlist.length; i++) {
@@ -51,7 +56,7 @@ function findDups() {
 		
 		unordered.style.display = "inline-block";
 				
-	} else {
+	} else { // if you're here, then no sentence entered or empty - append a message to the form element
 		let feedback = document.createElement('p');
 		document.getElementById('signUp').appendChild(feedback);
 		feedback.setAttribute('id', 'msg');
