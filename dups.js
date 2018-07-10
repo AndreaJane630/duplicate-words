@@ -35,7 +35,7 @@ function findDups() {
 		createOutput(wordlist);
 		
 		for (i=0; i < wordlist.length; i++) {
-			wordlist[i] = wordlist[i].toLowerCase().replace(',',"").replace('.',"").replace('?',"");
+			wordlist[i] = wordlist[i].toLowerCase().replace(',',"").replace('.',"").replace('?',"").replace('!',"");
 		}
 		
 		for (i=0; i < wordlist.length; i++) {
